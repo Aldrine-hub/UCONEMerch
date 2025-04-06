@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context="com.example.uconeshop.HomepageActivity">
+
+
+    <TextView
+        android:id="@+id/uconeshop_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="UCONE Shop"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@color/dark"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/uconeshop_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/oval_search_background"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"
+            android:hint="Search anything..."
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/upcoming_items_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcoming items"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/search_container"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/view_all_upcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/upcoming_items_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/pre_order_section"
+        android:layout_width="383dp"
+        android:layout_height="115dp"
+        android:background="@drawable/linear_layout_border"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upcoming_items_title">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/pre_order_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Up to 5% discount"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/pre_order_button"
+                android:layout_width="108dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/oval_button_background"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:text="Pre Order"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/pre_order_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="Pre Order Item"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lanyard" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/categories_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/pre_order_section"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/view_all_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/categories_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/categories_section"
+        android:layout_width="383dp"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categories_title">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/linear_layout_border"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:padding="18dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lanyard"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="230 items"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lanyard" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/linear_layout_border"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T-shirt"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="240 items"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:alpha="0.7"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/intramstshirtfront" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/popular_items_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/categories_section"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/view_all_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/popular_items_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/popular_items_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/view_all_popular">
+
+
+
+        <LinearLayout
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/linear_layout_border"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="121dp"
+                android:layout_gravity="center"
+                android:contentDescription="Popular Item"
+                android:src="@drawable/lanyard" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="start">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="29dp"
+                    android:background="@drawable/oval_search_background"
+                    android:gravity="center"
+                    android:text="2 days left"
+                    android:textColor="@color/gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="29dp"
+                    android:background="@drawable/oval_sale_background"
+                    android:gravity="center"
+                    android:text="Sale"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CCS Lanyard"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₱ 200         ₱240"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/linear_layout_border"
+            android:orientation="vertical"
+            android:padding="8dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="121dp"
+                android:layout_gravity="center"
+                android:contentDescription="Popular Item"
+                android:src="@drawable/intramstshirtfront" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="29dp"
+                    android:background="@drawable/oval_search_background"
+                    android:gravity="center"
+                    android:text="2 days left"
+                    android:textColor="@color/gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="29dp"
+                    android:background="@drawable/oval_sale_background"
+                    android:gravity="center"
+                    android:text="Sale"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CCS Intrams Tshirt"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₱ 200         ₱240"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/darkblue"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/home"
+            android:contentDescription="Home Icon"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/shop_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/shop"
+            android:contentDescription="Shop Icon"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/cart_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cart"
+            android:contentDescription="Cart Icon"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/orders_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/order"
+            android:contentDescription="Orders Icon"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:contentDescription="Profile Icon"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
